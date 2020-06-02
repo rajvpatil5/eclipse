@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="8698" started-at="2020-05-29T11:06:26Z" finished-at="2020-05-29T11:06:34Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="8698" started-at="2020-05-29T11:06:26Z" finished-at="2020-05-29T11:06:34Z">
+      <class name="com.maven.selenium.com.maven.RestAssuredApi.AddBook">
+        <test-method status="PASS" signature="addBook(java.lang.String, java.lang.String)[pri:0, instance:com.maven.selenium.com.maven.RestAssuredApi.AddBook@5ae63ade]" name="addBook" duration-ms="6608" started-at="2020-05-29T16:36:26Z" data-provider="BooksDataprovider" finished-at="2020-05-29T16:36:32Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[adffdfre]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[213212]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addBook -->
+        <test-method status="PASS" signature="deleteBook()[pri:0, instance:com.maven.selenium.com.maven.RestAssuredApi.AddBook@5ae63ade]" name="deleteBook" is-config="true" duration-ms="606" started-at="2020-05-29T16:36:32Z" finished-at="2020-05-29T16:36:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteBook -->
+        <test-method status="PASS" signature="addBook(java.lang.String, java.lang.String)[pri:0, instance:com.maven.selenium.com.maven.RestAssuredApi.AddBook@5ae63ade]" name="addBook" duration-ms="361" started-at="2020-05-29T16:36:33Z" data-provider="BooksDataprovider" finished-at="2020-05-29T16:36:33Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[wertrr]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[13213]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addBook -->
+        <test-method status="PASS" signature="deleteBook()[pri:0, instance:com.maven.selenium.com.maven.RestAssuredApi.AddBook@5ae63ade]" name="deleteBook" is-config="true" duration-ms="452" started-at="2020-05-29T16:36:33Z" finished-at="2020-05-29T16:36:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteBook -->
+        <test-method status="PASS" signature="addBook(java.lang.String, java.lang.String)[pri:0, instance:com.maven.selenium.com.maven.RestAssuredApi.AddBook@5ae63ade]" name="addBook" duration-ms="330" started-at="2020-05-29T16:36:34Z" data-provider="BooksDataprovider" finished-at="2020-05-29T16:36:34Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[tyytrtyr]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[535]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addBook -->
+        <test-method status="PASS" signature="deleteBook()[pri:0, instance:com.maven.selenium.com.maven.RestAssuredApi.AddBook@5ae63ade]" name="deleteBook" is-config="true" duration-ms="286" started-at="2020-05-29T16:36:34Z" finished-at="2020-05-29T16:36:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteBook -->
+      </class> <!-- com.maven.selenium.com.maven.RestAssuredApi.AddBook -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

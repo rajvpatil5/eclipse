@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite1]" parallel="classes">
+  <listeners>
+    <listener class-name="com.qa.ExtentReportsListeners.ExtentReporterNG"/>
+  </listeners>
+  <test name="nseTestcase(failed)" parallel="classes">
+    <classes>
+      <class name="com.testcases.nse.CheckTitle">
+        <methods>
+          <include name="pageTitle"/>
+        </methods>
+      </class> <!-- com.testcases.nse.CheckTitle -->
+      <class name="com.testcases.nse.Launchpage">
+        <methods>
+          <include name="launchChrome"/>
+        </methods>
+      </class> <!-- com.testcases.nse.Launchpage -->
+    </classes>
+  </test> <!-- nseTestcase(failed) -->
+</suite> <!-- Failed suite [Suite1] -->

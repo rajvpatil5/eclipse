@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite1" duration-ms="13625" started-at="2020-03-12T16:32:19Z" finished-at="2020-03-12T16:32:33Z">
+    <groups>
+    </groups>
+    <test name="nseTestcase" duration-ms="13625" started-at="2020-03-12T16:32:19Z" finished-at="2020-03-12T16:32:33Z">
+      <class name="com.testcases.nse.Launchpage">
+        <test-method status="PASS" signature="launchChrome()[pri:0, instance:com.testcases.nse.Launchpage@327471b5]" name="launchChrome" duration-ms="13585" started-at="2020-03-12T22:02:20Z" finished-at="2020-03-12T22:02:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchChrome -->
+      </class> <!-- com.testcases.nse.Launchpage -->
+    </test> <!-- nseTestcase -->
+  </suite> <!-- Suite1 -->
+</testng-results>
