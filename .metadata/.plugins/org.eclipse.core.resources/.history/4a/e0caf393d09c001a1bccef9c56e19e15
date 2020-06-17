@@ -1,0 +1,107 @@
+package com.linkdin;
+
+import java.awt.AWTException;
+import java.awt.Robot;
+import java.awt.datatransfer.UnsupportedFlavorException;
+import java.awt.event.KeyEvent;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.firefox.FirefoxProfile;
+import org.openqa.selenium.firefox.ProfilesIni;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+public class LeadGeneration {
+	static List<Object> name = new ArrayList<Object>();
+	static List<Object> position = new ArrayList<Object>();
+	static List<Object> linkdinUrl = new ArrayList<Object>();
+
+	public static void main(String[] args)
+			throws InterruptedException, AWTException, UnsupportedFlavorException, IOException {
+		Robot r = new Robot();
+		FirefoxOptions options = new FirefoxOptions();
+		ProfilesIni profile = new ProfilesIni();
+		FirefoxProfile ffp = profile.getProfile("Rajat");
+		options.setProfile(ffp);
+		WebDriver driver = new FirefoxDriver(options);
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		driver.get(
+				"https://www.linkedin.com/sales/search/people/list/employees-for-account/287589?_ntb=2doNiALTRiakg7bUNrmVyg%3D%3D&searchSessionId=%2F2TKLwV5QBaUXlA5ZLY5WA%3D%3D");
+
+		driver.findElement(By.xpath("//*[text()='Title']")).click();
+		driver.findElement(By.xpath("//div[@class='ph4 pb4 ember-view']/input")).sendKeys(
+				"\"Elearning\" OR \"e-learning\" OR \"Learning\" OR \"Training\" OR \"educational\" OR \"course\" OR “Education” OR “Digital Production” OR “Online Operations” OR “Instructional” OR \"People\" OR \"Talent\" OR \"Content development\"\r\n"
+						+ "");
+		r.keyPress(KeyEvent.VK_ENTER);
+		r.keyRelease(KeyEvent.VK_ENTER);
+
+		driver.findElement(By.xpath("//*[text()='Geography']")).click();
+		driver.findElement(By.xpath("//div[@class='ph4 pb4 ember-view']/input")).sendKeys("United States");
+		driver.findElement(By.xpath("//ol/li[1]/button")).click();
+
+		JavascriptExecutor jse = (JavascriptExecutor) driver;
+		for (int second = 0;; second++) {
+			if (second >= 10) {
+				break;
+			}
+			jse.executeScript("window.scrollBy(0,250)", ""); // y value '800' can be altered
+			Thread.sleep(1000);
+		}
+
+		List<WebElement> employees = driver.findElements(By.xpath("//a[@class='ember-view']"));// li[contains(@class,'search-result')]
+		System.out.println(employees.size());
+		WebDriverWait wait = new WebDriverWait(driver, 10);
+		for (int i = 0; i < employees.size(); i++) {
+			wait.Until(ExpectedConditions.visibilityOf(employees.get(i)));
+			employees.get(i).click();
+			name.add(driver.findElement(By.cssSelector(".profile-topcard-person-entity__name")).getText());
+			if (name.get(i).equals("LinkedIn Member")) {
+				position.add(null);
+				linkdinUrl.add(null);
+				driver.navigate().back();
+				Thread.sleep(5000);
+				for (int second = 0;; second++) {
+					if (second >= 10) {
+						break;
+					}
+					jse.executeScript("window.scrollBy(0,250)", ""); // y value '800' can be altered
+					Thread.sleep(1000);
+				}
+				employees = driver.findElements(By.xpath("//a[@class='ember-view']"));
+				continue;
+			}
+			position.add(driver.findElement(By.xpath("//dd[1][@class='mt2']")).getText());
+			driver.findElement(By.xpath("//li-icon[@type='ellipsis-horizontal-icon']")).click();
+			driver.findElement(By.xpath("//div[text()='Copy LinkedIn.com URL']")).click();
+			linkdinUrl.add(ClipboardData.clipboardPaste());
+			SimpleExcelWriterExample.setData(name, position, linkdinUrl);
+			driver.navigate().back();
+			Thread.sleep(5000);
+			for (int second = 0;; second++) {
+				if (second >= 10) {
+					break;
+				}
+				jse.executeScript("window.scrollBy(0,250)", ""); // y value '800' can be altered
+				Thread.sleep(1000);
+			}
+			employees = driver.findElements(By.xpath("//a[@class='ember-view']"));
+
+		}
+		System.out.println(name);
+		System.out.println(position);
+		System.out.println(linkdinUrl);
+		driver.quit();
+		SimpleExcelWriterExample.write();
+	}
+
+}

@@ -1,0 +1,18 @@
+
+public class Hello 
+{
+	void hello(int a)
+	{
+		
+	}
+	public static void main(String args[]) throws InterruptedException
+	{
+		System.out.println("Hi my name is Rajat");
+		
+		int Hello=100;
+		System.out.println(Hello);
+		
+		 
+	}
+
+}

@@ -1,0 +1,22 @@
+
+public class Child {
+	Child() {
+		this(30);
+		System.out.println("0 arg child");
+	}
+
+	Child(int a) {
+		System.out.println("1 arg child" + a);
+	}
+
+	String parent1() {
+		return "hh";
+
+	}
+
+	public static void main(String[] args) {
+		new Child();
+		new Parent().parent1();
+	}
+
+}

@@ -1,0 +1,10 @@
+
+public class Child1 extends Child implements It {
+
+	public static void main(String[] args) {
+
+		Child1 c = new Child1();
+		c.m1();
+		It.m1();
+	}
+}

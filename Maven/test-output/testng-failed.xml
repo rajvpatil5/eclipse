@@ -1,13 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test name="Default test(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite1]">
+  <listeners>
+    <listener class-name="com.qa.ExtentReportsListeners.ExtentReporterNG"/>
+    <listener class-name="com.ObjectRepositries.CustomListener"/>
+  </listeners>
+  <test name="nseTestcase(failed)">
     <classes>
-      <class name="com.testcases.nse.CheckTitle">
+      <class name="com.testng.selenium.Sample3">
         <methods>
-          <include name="pageTitle"/>
+          <include name="m3"/>
+          <include name="m1"/>
         </methods>
-      </class> <!-- com.testcases.nse.CheckTitle -->
+      </class> <!-- com.testng.selenium.Sample3 -->
+      <class name="com.testng.selenium.Sample2">
+        <methods>
+          <include name="m3"/>
+          <include name="m1"/>
+          <include name="m2"/>
+        </methods>
+      </class> <!-- com.testng.selenium.Sample2 -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- nseTestcase(failed) -->
+</suite> <!-- Failed suite [Suite1] -->

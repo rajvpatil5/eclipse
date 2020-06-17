@@ -1,62 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [Suite1]" parallel="classes">
+<suite guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [Suite1]">
   <listeners>
     <listener class-name="com.qa.ExtentReportsListeners.ExtentReporterNG"/>
     <listener class-name="com.ObjectRepositries.CustomListener"/>
   </listeners>
-  <test name="nseTestcase(failed)" parallel="classes">
+  <test name="nseTestcase(failed)">
     <classes>
-      <class name="com.testcases.nse.NaukriComWindow">
+      <class name="com.testng.selenium.Sample2">
         <methods>
-          <include name="test"/>
+          <include name="m3"/>
+          <include name="m1"/>
+          <include name="m2"/>
         </methods>
-      </class> <!-- com.testcases.nse.NaukriComWindow -->
-      <class name="com.testcases.nse.DropdownSelect">
+      </class> <!-- com.testng.selenium.Sample2 -->
+      <class name="com.testng.selenium.Sample3">
         <methods>
-          <include name="dropdownElement"/>
+          <include name="m3"/>
+          <include name="m1"/>
         </methods>
-      </class> <!-- com.testcases.nse.DropdownSelect -->
-      <class name="com.testcases.nse.AllLinkInWebpage">
-        <methods>
-          <include name="link"/>
-        </methods>
-      </class> <!-- com.testcases.nse.AllLinkInWebpage -->
-      <class name="com.testcases.nse.IframePaytm">
-        <methods>
-          <include name="test"/>
-        </methods>
-      </class> <!-- com.testcases.nse.IframePaytm -->
-      <class name="com.testcases.nse.TitleBarLinks">
-        <methods>
-          <include name="clickAllLinks"/>
-        </methods>
-      </class> <!-- com.testcases.nse.TitleBarLinks -->
-      <class name="com.testcases.nse.DropdownCompanies">
-        <methods>
-          <include name="test"/>
-        </methods>
-      </class> <!-- com.testcases.nse.DropdownCompanies -->
-      <class name="com.testcases.nse.CheckTitle">
-        <methods>
-          <include name="pageTitle"/>
-        </methods>
-      </class> <!-- com.testcases.nse.CheckTitle -->
-      <class name="com.testcases.nse.DemoScreenshot">
-        <methods>
-          <include name="demosnapshot"/>
-        </methods>
-      </class> <!-- com.testcases.nse.DemoScreenshot -->
-      <class name="com.testcases.nse.LinkName">
-        <methods>
-          <include name="name"/>
-        </methods>
-      </class> <!-- com.testcases.nse.LinkName -->
-      <class name="com.testcases.nse.ActionsClass">
-        <methods>
-          <include name="test"/>
-        </methods>
-      </class> <!-- com.testcases.nse.ActionsClass -->
+      </class> <!-- com.testng.selenium.Sample3 -->
     </classes>
   </test> <!-- nseTestcase(failed) -->
 </suite> <!-- Failed suite [Suite1] -->

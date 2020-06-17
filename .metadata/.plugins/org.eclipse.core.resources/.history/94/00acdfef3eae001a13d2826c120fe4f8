@@ -1,0 +1,5 @@
+package DayToDayPractice;
+
+public class UserDefineException extends Exception {
+
+}

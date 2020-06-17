@@ -13,8 +13,8 @@ public class DataReader {
 
 	static List<Object> column1 = new ArrayList<Object>();
 	static List<Object> column2 = new ArrayList<Object>();
-	static List<Object> column3 = new ArrayList<Object>();
-	static List<Object> column4 = new ArrayList<Object>();
+	//static List<Object> column3 = new ArrayList<Object>();
+	//static List<Object> column4 = new ArrayList<Object>();
 
 	public static void main(String[] args) throws Exception {
 
@@ -37,18 +37,18 @@ public class DataReader {
 				for (int k = 0; k < 1; k++) {
 					column1.add(arr[0]);
 					column2.add(arr[1]);
-					column3.add(arr[2]);
-					column4.add(arr[3]);
+					//column3.add(arr[2]);
+					//column4.add(arr[3]);
 
 				}
 			}
 		}
 		System.out.println(column1);
 		System.out.println(column2);
-		System.out.println(column3);
-		System.out.println(column4);
+		//System.out.println(column3);
+		//System.out.println(column4);
 
-		DataWriter.setData(column1, column2, column3, column4);
+		DataWriter.setData(column1, column2);
 		workbook.close();
 		fis.close();
 

@@ -1,0 +1,9 @@
+
+public interface It {
+	static void m1() {
+		System.out.println("hello");
+	}
+
+	void m2() {}
+
+}

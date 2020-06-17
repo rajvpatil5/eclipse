@@ -1,0 +1,55 @@
+package com.resume;
+
+import java.io.IOException;
+import org.apache.pdfbox.pdmodel.PDDocument;
+import org.apache.pdfbox.pdmodel.PDPage;
+import org.apache.pdfbox.pdmodel.PDPageContentStream;
+import org.apache.pdfbox.pdmodel.font.PDFont;
+import org.apache.pdfbox.pdmodel.font.PDType1Font;
+
+public class Resume {
+
+	public static void main(String[] args) throws IOException {
+		String str = "Rajat";
+		String filename = "D:\\b.pdf";
+		PDDocument doc = new PDDocument();
+		try {
+			PDPage page = new PDPage();
+			doc.addPage(page);
+
+			PDFont font = PDType1Font.HELVETICA_BOLD;
+
+			PDPageContentStream contents = new PDPageContentStream(doc, page);
+			contents.beginText();
+			contents.setFont(font, 20);
+			contents.newLineAtOffset(50, 700);
+			String line1 = "World War II (often abbreviated to WWII or WW2), " + "also known as the Second World War,";
+			contents.showText(line1);
+
+			contents.newLine();
+
+			String line2 = "was a global war that lasted from 1939 to 1945, "
+					+ "although related conflicts began earlier.";
+			contents.showText(line2);
+			contents.newLine();
+
+			String line3 = "It involved the vast majority of the world's "
+					+ "countries—including all of the great powers—";
+			contents.showText(line3);
+			contents.newLine();
+
+			String line4 = "eventually forming two opposing military " + "alliances: the Allies and the Axis.";
+			contents.showText(line4);
+			contents.newLine();
+			contents.endText();
+			contents.close();
+
+			doc.save(filename);
+		} finally {
+			doc.close();
+		}
+		System.out.println("Pdf created");
+
+	}
+
+}

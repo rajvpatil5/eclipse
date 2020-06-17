@@ -7,17 +7,7 @@ public class Sample1 {
 
 	@Test
 	public void m1() {
-		Assert.assertTrue(true);
-	}
-
-	@Test
-	public void m2() {
-		Assert.assertTrue(true);
-	}
-
-	@Test
-	public void m3() {
-		Assert.assertTrue(true);
+		System.out.println("sample1");
 	}
 
 }

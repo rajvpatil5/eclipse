@@ -1,0 +1,27 @@
+package com.resume;
+
+public class PdfWriter extends StringExtractor{
+
+	public static void main(String[] args) {
+		 contentStream.beginText();
+		    contentStream.setFont(pdfFont, fontSize);
+		    contentStream.moveTextPositionByAmount(startX, startY);            
+		    for (String line: lines)
+		    {
+		        contentStream.drawString(line);
+		        contentStream.moveTextPositionByAmount(0, -leading);
+		    }
+		    contentStream.endText(); 
+		    contentStream.close();
+
+		    doc.save("break-long-string.pdf");
+		}
+		
+		    if (doc != null)
+		    {
+		        doc.close();
+		    }
+		
+	}
+
+}

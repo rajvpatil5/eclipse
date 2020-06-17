@@ -12,12 +12,12 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 public class DataWriter {
 	static List<List<Object>> data = new ArrayList<List<Object>>();
 
-	public static void setData(List<Object> column1, List<Object> column2, List<Object> column3, List<Object> column4)
+	public static void setData(List<Object> column1, List<Object> column2)
 			throws IOException {
 		data.add(column1);
 		data.add(column2);
-		data.add(column3);
-		data.add(column4);
+	//	data.add(column3);
+	//	data.add(column4);
 
 		DataWriter.write();
 	}

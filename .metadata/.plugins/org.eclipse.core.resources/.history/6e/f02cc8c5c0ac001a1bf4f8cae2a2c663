@@ -1,0 +1,15 @@
+package DayToDayPractice;
+
+public class ResumeGenerator {
+
+	public static void main(String[] args) {
+		String str = "Rajat Patil";
+		PDDocument document = new PDDocument();
+		document.addPage(new PDPage());
+		document.save("C:/pdfBox/BlankPdf.pdf");
+
+		System.out.println("PDF created");
+		document.close();
+	}
+
+}
