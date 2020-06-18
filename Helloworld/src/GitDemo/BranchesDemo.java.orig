@@ -4,12 +4,14 @@ public class BranchesDemo {
 
 	public static void main(String[] args) {
 <<<<<<< HEAD
-		System.out.println("hi I am the one from developrajat branch");
+		System.out.println("hi I am the one from developrajat branchq");
 		System.out.println("master branch");
-||||||| 485eb07
-		System.out.println("hi I am the one from developrajat branch");
-=======
+
+||||||| 198c737
 		System.out.println("hi I am the one from developrajat branchp");
+		System.out.println("developRajat");
+=======
+		System.out.println("hi I am the one from developrajat branchqw");
 		System.out.println("developRajat");
 >>>>>>> developrajat
 	}
