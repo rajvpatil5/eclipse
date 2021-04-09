@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Suite1" verbose="1">
+	<listeners>
+		<listener
+			class-name="com.springct.smartopen.utilities.Reporting" />
+	</listeners>
+	<test name="astppTestcase">
+		<parameter name="browser" value="chrome" />
+		<classes>
+			<class name="com.springct.smartopen.testcases.TC_LoginTestcase_01" />
+			<class name="com.springct.smartopen.testcases.TC_NewSmartopenAccount_02" />
+			<class name="com.springct.smartopen.testcases.Youtube" />
+			
+		</classes>
+	</test>
+</suite>

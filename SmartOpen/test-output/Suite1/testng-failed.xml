@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite1]">
+  <listeners>
+    <listener class-name="com.springct.smartopen.utilities.Reporting"/>
+  </listeners>
+  <test thread-count="5" name="astppTestcase(failed)">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="com.springct.smartopen.testcases.TC_NewSmartopenAccount_02">
+        <methods>
+          <include name="teardown"/>
+          <include name="logintest"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.springct.smartopen.testcases.TC_NewSmartopenAccount_02 -->
+    </classes>
+  </test> <!-- astppTestcase(failed) -->
+</suite> <!-- Failed suite [Suite1] -->

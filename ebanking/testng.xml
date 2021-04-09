@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Suite1" verbose="1">
+	<listeners>
+		<listener
+			class-name="com.guru99.ebanking.utilities.Reporting" />
+	</listeners>
+	<test name="astppTestcase">
+		<parameter name="browser" value="chrome" />
+		<classes>
+			<class name="com.guru99.ebanking.testcases.TC_LoginTestcase_01" />
+			<!--  <class name="com.guru99.ebanking.testcases.TC_LoginDDT_002" />
+			<class name="com.guru99.ebanking.testcases.TC_AddCustomerTest_003" /> -->
+		</classes>
+	</test>
+</suite>

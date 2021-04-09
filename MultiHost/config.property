@@ -1,0 +1,14 @@
+MaximumInstance=50
+FakeCamera=true
+implicit.wait = 10
+url=https://fujitsu-staging.loookit.com/
+Machine=Linux
+MeetingMenu=1
+MeetingType=6
+MeetingName=LoadTest
+NumberofMeetings=1
+NumbersofUsers=3
+MeetingOption=Passcode
+ExecutionMode=nonGrid
+ExecutionType=nonHeadless
+ChromePath=driver//chromedriver.exe

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [My Test Suite]">
+  <test thread-count="5" name="My Test(failed)">
+    <classes>
+      <class name="Jy.Youtube.DataProviderTestClass">
+        <methods>
+          <include name="test"/>
+        </methods>
+      </class> <!-- Jy.Youtube.DataProviderTestClass -->
+    </classes>
+  </test> <!-- My Test(failed) -->
+</suite> <!-- Failed suite [My Test Suite] -->

@@ -23,6 +23,21 @@
 	</section>
 	<section name="org.eclipse.m2e.core.pom.overview">
 	</section>
+	<section name="MavenProjectImportWizardPage">
+		<list key="rootDirectory">
+			<item value="C:\Users\Hp\eclipse-workspace\MultiHost"/>
+			<item value="C:\Users\Hp\eclipse-workspace\astpp"/>
+			<item value="C:\Users\Hp\eclipse-workspace\ebanking"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
 	<section name="MavenProjectWizardArchetypePage">
 		<item value="All Catalogs" key="catalog"/>
 		<list key="projectNameTemplate">
@@ -48,6 +63,7 @@
 	</section>
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="C:\Users\Hp\eclipse-workspace\SmartOpen\pom.xml"/>
 			<item value="C:\Users\Hp\eclipse-workspace\Selenium"/>
 		</list>
 		<list key="projectNameTemplate">
@@ -61,10 +77,16 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
+			<item value="com.RestAssured.NaveenAutomationLabs"/>
+			<item value="Jy.Youtube"/>
 		</list>
 		<list key="groupId">
+			<item value="com.RestAssured"/>
+			<item value="Jy"/>
 		</list>
 		<list key="artifactId">
+			<item value="NaveenAutomationLabs"/>
+			<item value="Youtube"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>

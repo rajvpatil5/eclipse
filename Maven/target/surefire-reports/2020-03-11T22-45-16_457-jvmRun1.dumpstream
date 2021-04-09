@@ -1,3 +1,0 @@
-# Created at 2020-03-11T22:45:17.581
-org.xml.sax.SAXParseException; lineNumber: 3; columnNumber: 51; Attribute "parallel" with value "Tests" must have a value from the list "false true none methods tests classes instances ".
-
