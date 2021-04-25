@@ -8,21 +8,27 @@ public class TestBase {
 
 	public Properties prop;
 	public FileInputStream in;
+	public TestBase testbase;
+	public String serviceURL = readConfigData("serviceURL");
+	public String url = readConfigData("URL");
+	public String getURL = url + serviceURL;
 
-	public TestBase() {
-		try {
-			prop = new Properties();
-			in = new FileInputStream(System.getProperty("user.dir") + "\\config.properties");
-			prop.load(in);
-		} catch (Exception e) {
-			e.printStackTrace();
-		} finally {
+	public String readConfigData(String testdata) {
+		if (prop == null) {
 			try {
-				in.close();
-			} catch (IOException e) {
+				prop = new Properties();
+				in = new FileInputStream(System.getProperty("user.dir") + "\\config.properties");
+				prop.load(in);
+			} catch (Exception e) {
 				e.printStackTrace();
+			} finally {
+				try {
+					in.close();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
 			}
 		}
-
+		return prop.getProperty(testdata);
 	}
 }

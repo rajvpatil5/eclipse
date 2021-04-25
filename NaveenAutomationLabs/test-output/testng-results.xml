@@ -1,29 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="18411" started-at="2021-04-09T17:15:51Z" finished-at="2021-04-09T17:16:10Z">
+  <suite started-at="2021-04-25T06:45:15Z" name="Default suite" finished-at="2021-04-25T06:45:16Z" duration-ms="1754">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="18411" started-at="2021-04-09T17:15:51Z" finished-at="2021-04-09T17:16:10Z">
-      <class name="GetApiTest">
-        <test-method status="PASS" signature="setup()[pri:0, instance:GetApiTest@6d8a00e3]" name="setup" is-config="true" duration-ms="7" started-at="2021-04-09T22:45:51Z" finished-at="2021-04-09T22:45:51Z">
+    <test started-at="2021-04-25T06:45:15Z" name="Default test" finished-at="2021-04-25T06:45:16Z" duration-ms="1754">
+      <class name="PostApiTest">
+        <test-method signature="postTest()[pri:0, instance:PostApiTest@421e361]" started-at="2021-04-25T12:15:15Z" name="postTest" finished-at="2021-04-25T12:15:16Z" duration-ms="1720" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="getTest()[pri:0, instance:GetApiTest@6d8a00e3]" name="getTest" duration-ms="15482" started-at="2021-04-09T22:45:51Z" finished-at="2021-04-09T22:46:07Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getTest -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:GetApiTest@6d8a00e3]" name="setup" is-config="true" duration-ms="1" started-at="2021-04-09T22:46:07Z" finished-at="2021-04-09T22:46:07Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="getTestWithHeaders()[pri:0, instance:GetApiTest@6d8a00e3]" name="getTestWithHeaders" duration-ms="2892" started-at="2021-04-09T22:46:07Z" finished-at="2021-04-09T22:46:10Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getTestWithHeaders -->
-      </class> <!-- GetApiTest -->
+        </test-method> <!-- postTest -->
+      </class> <!-- PostApiTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
